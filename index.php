@@ -1,1 +1,1 @@
-<?php header( 'Location: /permea.html' ) ;  ?>
+<?php header( 'Location: /permea.php' ) ;  ?>
