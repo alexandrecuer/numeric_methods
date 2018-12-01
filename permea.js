@@ -9,7 +9,7 @@ function fzero(f,a,b){
         return {zero: b,nbit: 0};
     }
     if (Math.sign(f_a)==Math.sign(f_b)) {
-        return {zero: "sign of f(a) and sign of f(b) must be opposite",nbit: 0};
+        return {zero: "sign of f(a) and f(b) must be opposite",nbit: 0};
         }
     if (isNaN(f_a) || isNaN(f_b)) {
         return {zero: "a or b is NaN",nbit: 0};

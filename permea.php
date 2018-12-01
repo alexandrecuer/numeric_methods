@@ -16,7 +16,7 @@
           echo("<button id=$mathfunc[$i]>$mathfunc_js[$i]</button>");
       echo("<br>");
       ?>
-      Enter function expression: <input id="f" type="text"  style="width:200px"><br>
+      Enter function expression: <input id="f" type="text"  style="width:400px"><button id='clear'>clear</button><br>
       graphic resolution : <input id="pas" type="text"  style="width:50px" value='0.001'>
       a : <input id="xmin" type="text"  style="width:50px" value='-20.0'>
       b : <input id="xmax" type="text"  style="width:50px" value='4'>
@@ -73,7 +73,6 @@
           if (typeof(zero) == "string") {
               document.getElementById("zero").value = zero;
           } else {
-              console.log(Math.round(zero*100)/100);
               document.getElementById("zero").value = (Math.round(zero*100))/100;
               document.getElementById("nbit").value = result.nbit;
           }
@@ -81,6 +80,7 @@
       }
       
       $("#fzero").click(function () {plotnfind();});
+      $("#clear").click(function () {document.getElementById("f").value = "";});
       <?php
       for ($i=0;$i<sizeof($mathfunc);$i++){
           $a = $mathfunc[$i];$b = $mathfunc_js[$i];
