@@ -10,8 +10,8 @@
    <body>
       <h1>Decker-Brent</h1>
       <?php 
-      $mathfunc=["acos","asin","atan","sin","cos","tan","pow","PI","E","exp","log","sqrt","asin","acos"];
-      $mathfunc_js=["acos(x)","asin(x)","atan(x)","sin(x)","cos(x)","tan(x)","pow(x,3)","PI","E","exp(x)","log(x)","sqrt(x)","asin(x)","acos(x)"];
+      $mathfunc=["acos","asin","atan","sin","cos","tan","pow","PI","E","exp","log","sqrt","sinh","cosh"];
+      $mathfunc_js=["acos(x)","asin(x)","atan(x)","sin(x)","cos(x)","tan(x)","pow(x,3)","PI","E","exp(x)","log(x)","sqrt(x)","sinh(x)","acosh(x)"];
       for ($i=0;$i<sizeof($mathfunc);$i++)
           echo("<button id=$mathfunc[$i]>$mathfunc_js[$i]</button>");
       echo("<br>");
