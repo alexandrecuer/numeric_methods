@@ -1,17 +1,18 @@
-//number of iterations
-var nbit=0;
-
 //decker-brent
 function fzero(f,a,b){
     var f_a = f(a);
     var f_b = f(b);
-    if (f_a == 0) return a;
-    if (f_b == 0) return b;
+    if (f_a == 0) {
+        return {zero: a,nbit: 0};
+    }
+    if (f_b == 0) {
+        return {zero: b,nbit: 0};
+    }
     if (Math.sign(f_a)==Math.sign(f_b)) {
-        return "sign of f(a) and sign of f(b) must be opposite";
+        return {zero: "sign of f(a) and sign of f(b) must be opposite",nbit: 0};
         }
     if (isNaN(f_a) || isNaN(f_b)) {
-        return "a or b is NaN";
+        return {zero: "a or b is NaN",nbit: 0};
         }
     var c = a;
     var f_c = f_a;
@@ -40,9 +41,7 @@ function fzero(f,a,b){
         tol = 2.0*Math.pow(2,-52)*Math.max(Math.abs(b),1.0);
         //tol = 2.0*0.0000000001*Math.max(Math.abs(b),1.0);
         if ((Math.abs(m) <= tol) || (f_b == 0.0)) {
-            console.log(i);
-            nbit=i;
-            return b;
+            return {zero: b,nbit: i};
         }
 
         if (Math.abs(e) < tol || Math.abs(f_c) <= Math.abs(f_b)) {
@@ -85,7 +84,9 @@ function fzero(f,a,b){
             b = b - Math.sign(b-a)*tol;
         }
         f_b = f(b);
-        if (f_b == 0) return b;
+        if (f_b == 0) {
+            return {zero: b,nbit: i};
+        }
     }
     
 }
