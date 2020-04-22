@@ -47,7 +47,7 @@ $("#s5").click(function(){
 </script>
 
 <?php
-
+include("./menu.php");
 $verbose=1;
 
 if (!$formula) exit();
