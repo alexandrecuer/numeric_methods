@@ -1,6 +1,7 @@
 <?php
 //retrieving the formula if any
 $formula=$_POST['formula'];
+include $_SERVER['DOCUMENT_ROOT']."/menu.php" ;
 ?>
 <html>
 <head>
@@ -47,7 +48,7 @@ $("#s5").click(function(){
 </script>
 
 <?php
-include $_SERVER['DOCUMENT_ROOT']."/menu.php" ;
+
 $verbose=1;
 
 if (!$formula) exit();

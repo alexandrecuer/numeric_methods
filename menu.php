@@ -10,6 +10,6 @@ print("</pre>");
 ?>
 
 <ul id="menu">
-    <li><a href="permea.php">find zero with decker-brent</a></li>
-    <li><a href="symb/formula2020.php">Analyse a symbolic expression</a></li>
+    <li><a href=$_SERVER['DOCUMENT_ROOT']."/permea.php">find zero with decker-brent</a></li>
+    <li><a href=$_SERVER['DOCUMENT_ROOT']."/symb/formula2020.php">Analyse a symbolic expression</a></li>
 </ul>
