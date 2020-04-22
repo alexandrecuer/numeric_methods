@@ -1,3 +1,6 @@
+<?php
+include $_SERVER['DOCUMENT_ROOT']."/menu.php" ;
+?>
 <html>
    <head>
    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
